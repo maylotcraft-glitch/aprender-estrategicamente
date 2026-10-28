@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="css2.css">
+<body>
+
+  <aside class="lateral">
+    <img src="logo.png" class="logo" alt="Logo">
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#" class="activo">Nosotros</a></li>
+        <li><a href="part3.html">Solucion Tecnica</a></li>
+        <li><a href="part4.html">Evidencias</a></li>
+        <li><a href="part5.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="pagina">
+
+    <div class="roja2"></div>
+
+    <header>
+      <div class="marco">
+        <img src="BANNER2.png" class="banner" alt="Banner">
+      </div>
+    </header>
+
+    <div class="roja"></div>
+
+    <section class="inicio">
+      <h1 class="categoria">ELECCION MULTIPLE</h1>
+    </section>
+
+    <div class="layout">
+      <nav class="sidebar">
+        <button onclick="mostrarImagen(1)">Mision</button>
+        <button onclick="mostrarImagen(2)">Vision</button>
+        <button onclick="mostrarImagen(3)">Objetivos especificos</button>
+        <button onclick="mostrarImagen(4)">Objetivos generales</button>
+        <button onclick="mostrarImagen(5)">Cronograma</button>
+        <button onclick="mostrarImagen(6)">Problema/Pregunta</button>
+        <button onclick="mostrarImagen(7)">Documento</button>
+      </nav>
+
+      <div id="contenedor" class="contenido">
+        <img id="img1" src="proyet-01.png" alt="Mision" style="display:none;">
+        <img id="img2" src="proyet-burgod y olmos-02.png" alt="Vision" style="display:none;">
+        <img id="img3" src="proyet-03.png" alt="Objetivos especificos" style="display:none;">
+        <img id="img4" src="proyet-04.png" alt="Objetivos generales" style="display:none;">
+        <img id="img5" src="cronograma.png" alt="Cronograma" style="display:none;">
+        <img id="img6" src="proyet-burgod y olmos-05.png" alt="Problema/Pregunta" style="display:none;">
+
+        <!-- Documento: aparece al pulsar el botón "Documento" -->
+        <section id="img7" class="documento-pdf" style="display:none; width:min(750px, 90vw);">
+          <h2>Documentos del proyecto</h2>
+          <p>Consulta el documento completo de nuestro proyecto.</p>
+          <div class="tarjeta-pdf">
+            <div class="icono-pdf">📄</div>
+            <h3>Documento del proyecto</h3>
+            <p>Archivo en formato PDF</p>
+            <div class="botones-pdf">
+              <a href="https://drive.google.com/file/d/1kS79lkcOzL1rmxX-gisFJGbON1cRqK4r/view?usp=drivesdk"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn-pdf">
+                Ver documento
+              </a>
+              <a href="https://drive.google.com/uc?export=download&id=1kS79lkcOzL1rmxX-gisFJGbON1cRqK4r"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn-pdf descargar">
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function mostrarImagen(num) {
+      document.querySelectorAll("#contenedor > *").forEach(el => el.style.display = "none");
+      const el = document.getElementById("img" + num);
+      if (el) el.style.display = "block";
+    }
+  </script>
+</body>
